@@ -23,12 +23,17 @@
                          <form>
                              <div class="form-group">
                                  <label for="emailSignup">Reserve your account now, we'il contact you when it's live</label>
-                                 <input id="emailSignup" 
+                                 <input v-model="email"
+                                        type="email"
+                                        id="emailSignup" 
                                          placeholder="Enter Email"
                                          class="form-control"
                                 >
                                  <small id="emailHelp" class="form-text text-muted">We'll never share your email address</small> 
                                  <button type="submit" class="btn btn-success mt-3">Join Waiting List</button>
+                                 <div class="mt-4">
+                                    <p class="m-0">{{ message }}</p>
+                                 </div>
 
                              </div>
                          </form>
@@ -127,10 +132,13 @@
 </template>
 
 <script>
+import { Auth } from '@/firebase/auth.js'
 export default {
   data () {
       return {
           title: 'Travel Treasury',
+          email: '',
+          message: 'something',
       }
 
   }

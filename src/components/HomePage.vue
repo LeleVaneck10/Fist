@@ -132,7 +132,7 @@
 </template>
 
 <script>
-import { Auth } from '@/firebase/auth.js'
+/* import { Auth } from '@/firebase/auth.js'
 export default {
   data () {
       return {
@@ -142,7 +142,7 @@ export default {
       }
 
   }
-}
+} */
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
